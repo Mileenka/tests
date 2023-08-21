@@ -1,0 +1,106 @@
+@use '../1_settings/' as *;
+
+
+.mobileOpenMenu,
+.navList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: .3rem;
+    padding: .3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: .9rem;
+}
+
+.menu {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid white;
+    border-radius: .3rem;
+}
+
+.menuPart1,
+.menuPart4 {
+    box-shadow: #f004f045 -1.5px 0px 0px 1px, rgba(255, 255, 255, 0.793) 1px 1px 0px 1px;
+}
+
+.mobileCloseMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+    margin-left: 1.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.closeIcon {
+    position: absolute;
+    width: 1.5rem;
+    border-radius: .2rem;
+    border: 3px solid #ffffff;
+}
+
+.closeMenuPart1 {
+    rotate: 45deg;
+    box-shadow: #f004f045 3px -.5px 0px 1px, rgba(255, 255, 255, 0.793) -3px .5px 0px 1px;
+}
+
+.closeMenuPart2 {
+    rotate: -45deg;
+}
+
+.navList {
+    width: 3.5rem;
+    height: 3.5rem;
+    box-shadow: #f004f040 0px 1px 3px 1.5px, rgba(255, 255, 255, 0.793) 0px 1px 3px 1.5px, rgb(15, 3, 68) 3px 0px 5px 1.5px;
+    rotate: 45deg;
+}
+
+.navList a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: .8rem;
+    rotate: 315deg;
+    color: $font-color;
+    text-decoration: none;
+}
+
+.home {
+    animation-name: home;
+    animation-duration: $animation-duration-slow;
+    animation-fill-mode: forwards;
+
+}
+
+.codeCrafts {
+    animation-name: codeCrafts;
+    animation-duration: $animation-duration-normal;
+    animation-fill-mode: forwards;
+
+}
+
+.myStory {
+    animation-name: myStory;
+    animation-duration: $animation-duration-fast;
+    animation-fill-mode: forwards;
+}
+
+.mySkills {
+    animation-name: mySkills;
+    animation-duration: 1.9s;
+    animation-fill-mode: forwards;
+}
+
+.quickContact {
+    animation-name: quickContact;
+    animation-duration: 2.1s;
+    animation-fill-mode: forwards;
+}
+

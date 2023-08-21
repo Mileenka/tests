@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fonts */
+/* Colors */
+/* Breakpoints for RWD */
+/* Animation */
+body {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.968627451);
+  font-size: 10px;
+  font-family: "Baumans", cursive;
+}
+
+.mobileOpenMenu,
+.navList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.3rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 0.9rem;
+}
+
+.menu {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid white;
+  border-radius: 0.3rem;
+}
+
+.menuPart1,
+.menuPart4 {
+  box-shadow: rgba(240, 4, 240, 0.2705882353) -1.5px 0px 0px 1px, rgba(255, 255, 255, 0.793) 1px 1px 0px 1px;
+}
+
+.mobileCloseMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.closeIcon {
+  position: absolute;
+  width: 1.5rem;
+  border-radius: 0.2rem;
+  border: 3px solid #ffffff;
+}
+
+.closeMenuPart1 {
+  rotate: 45deg;
+  box-shadow: rgba(240, 4, 240, 0.2705882353) 3px -0.5px 0px 1px, rgba(255, 255, 255, 0.793) -3px 0.5px 0px 1px;
+}
+
+.closeMenuPart2 {
+  rotate: -45deg;
+}
+
+.navList {
+  width: 3.5rem;
+  height: 3.5rem;
+  box-shadow: rgba(240, 4, 240, 0.2509803922) 0px 1px 3px 1.5px, rgba(255, 255, 255, 0.793) 0px 1px 3px 1.5px, rgb(15, 3, 68) 3px 0px 5px 1.5px;
+  rotate: 45deg;
+}
+
+.navList a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.8rem;
+  rotate: 315deg;
+  color: #f3f1d3;
+  text-decoration: none;
+}
+
+.home {
+  animation-name: home;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.codeCrafts {
+  animation-name: codeCrafts;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.myStory {
+  animation-name: myStory;
+  animation-duration: 1.6s;
+  animation-fill-mode: forwards;
+}
+
+.mySkills {
+  animation-name: mySkills;
+  animation-duration: 1.9s;
+  animation-fill-mode: forwards;
+}
+
+.quickContact {
+  animation-name: quickContact;
+  animation-duration: 2.1s;
+  animation-fill-mode: forwards;
+}
+
+.displayNone {
+  display: none;
+}
+
+.visibilityHidden {
+  visibility: hidden;
+}
+
+@keyframes home {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0.4rem);
+  }
+}
+@keyframes myStory {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-1.7rem) translateY(-9rem);
+  }
+}
+@keyframes codeCrafts {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(6.5rem) translateY(-9.5rem);
+  }
+}
+@keyframes mySkills {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0rem) translateY(-9rem);
+    animation-play-state: paused;
+  }
+}
+@keyframes quickContact {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(2rem) translateY(-17rem);
+    animation-play-state: paused;
+  }
+}
+.container {
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  height: 60vh;
+  width: 30vw;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+}
+
+.box {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  height: 125px;
+  width: 125px;
+  transform-style: preserve-3d;
+  transform: rotateY(175deg) rotateX(15deg);
+}
+
+.box::after {
+  content: "Milena Wasowicz Frontend-Developer";
+  position: absolute;
+  top: 0rem;
+  left: -1.2rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  text-shadow: rgba(240, 4, 240, 0.2509803922) 8px 10px 3px 1.5px;
+  color: pink;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(-160deg);
+}
+
+.side {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  text-align: center;
+  padding: 100px, 0px;
+  background: rgba(0, 0, 0, 0);
+  border-width: 2px;
+  border-style: solid;
+  font-size: 32px;
+  box-sizing: border-box;
+}
+
+.side::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
+}
+
+.side.top::before,
+.side.bottom::before {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
+}
+
+.side.left::before,
+.side.right::before {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
+}
+
+.left {
+  right: 62.5px;
+  transform: rotateY(90deg);
+}
+
+.right {
+  left: 62.5px;
+  transform: rotateY(90deg);
+}
+
+.top {
+  bottom: 62.5px;
+  transform: rotateX(90deg);
+}
+
+.bottom {
+  top: 62.5px;
+  transform: rotateX(90deg);
+}
+
+.front {
+  transform: translateZ(62.5px);
+}
+
+.back {
+  transform: translateZ(-62.5px);
+}
+
+/*# sourceMappingURL=style.css.map */

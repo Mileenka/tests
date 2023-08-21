@@ -1,0 +1,122 @@
+// @use '1_settings';
+// @use '2_tools';
+@use '3_generic' as *;
+@use '4_elements' as *;
+@use '5_objects' as *;
+@use '6_components' as *;
+// @use '7_templates' as *;
+@use '8_utilities' as *;
+
+
+// .animated-background {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     // z-index: -1;
+//     border: 1px solid pink;
+
+// }
+
+
+.container {
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    height: 60vh;
+    width: 30vw;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+
+.box {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    height: 125px;
+    width: 125px;
+    transform-style: preserve-3d;
+    transform: rotateY(175deg) rotateX(15deg);
+}
+
+.box::after {
+    content: 'Milena Wasowicz Frontend-Developer';
+    position: absolute;
+    top: 0rem;
+    left: -1.2rem;
+    padding: 1.5rem;
+    font-size: .9rem;
+    letter-spacing: 5px;
+    text-shadow: #f004f040 8px 10px 3px 1.5px;
+    color: pink;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(-160deg);
+}
+
+.side {
+    position: absolute;
+    height: 125px;
+    width: 125px;
+    text-align: center;
+    padding: 100px, 0px;
+    background: rgba(0, 0, 0, 0);
+    border-width: 2px;
+    border-style: solid;
+    // border-color: white;
+    font-size: 32px;
+    box-sizing: border-box;
+}
+
+.side::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
+}
+
+.side.top::before,
+.side.bottom::before {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
+}
+
+.side.left::before,
+.side.right::before {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
+}
+
+.left {
+    right: 62.5px;
+    transform: rotateY(90deg);
+}
+
+.right {
+    left: 62.5px;
+    transform: rotateY(90deg);
+}
+
+.top {
+    bottom: 62.5px;
+    transform: rotateX(90deg);
+}
+.bottom {
+    top: 62.5px;
+    transform: rotateX(90deg);
+}
+
+.front{
+    transform: translateZ(62.5px);
+}
+.back {
+    transform: translateZ(-62.5px);
+}
