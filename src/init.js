@@ -42,6 +42,8 @@ dom.mobileOpenMenu.addEventListener('click', () => {
 
 // });
 
+
+
 // const getCurrentRotateY = () => {
 //     const transform = getComputedStyle(box).getPropertyValue('transform');
 //     const values = transform.split('(')[1].split(')')[0].split(',');
@@ -59,3 +61,68 @@ dom.mobileOpenMenu.addEventListener('click', () => {
 
 //   return Math.round(Math.atan2(c, a) * (180 / Math.PI));
 // }
+
+
+const box = document.querySelector('.box');
+let isDragging = false;
+let startMouseX, startMouseY, startRotateY, startRotateX = 0;
+
+box.addEventListener('mousedown', startDrag);
+box.addEventListener('touchstart', startDragTouch);
+
+document.addEventListener('mouseup', stopDrag);
+document.addEventListener('touchend', stopDrag);
+
+document.addEventListener('mousemove', drag);
+document.addEventListener('touchmove', dragTouch, { passive: false });
+
+function startDrag(e) {
+  isDragging = true;
+  startMouseX = e.clientX;
+  startMouseY = e.clientY;
+  startRotateY = getCurrentRotateY();
+  startRotateX = getCurrentRotateX();
+  e.preventDefault();
+}
+
+function startDragTouch(e) {
+  const touch = e.touches[0];
+  startDrag(touch);
+}
+
+function stopDrag() {
+  isDragging = false;
+}
+
+function drag(e) {
+  if (!isDragging) return;
+
+  const rotateDiff = (e.clientX - startMouseX) * 0.5;
+  const newRotateY = startRotateY + rotateDiff;
+  const newRotateX = startRotateX + rotateDiff;
+
+  box.style.transform = `rotateY(${newRotateY}deg) rotateX(${newRotateX}deg)`;
+}
+
+function dragTouch(e) {
+  const touch = e.touches[0];
+  drag(touch);
+}
+
+function getCurrentRotateY() {
+  const transform = getComputedStyle(box).getPropertyValue('transform');
+  const values = transform.split('(')[1].split(')')[0].split(',');
+  const a = values[0];
+  const b = values[1];
+
+  return Math.round(Math.atan2(b, a) * (180 / Math.PI));
+}
+
+function getCurrentRotateX() {
+  const transform = getComputedStyle(box).getPropertyValue('transform');
+  const values = transform.split('(')[1].split(')')[0].split(',');
+  const a = values[5];
+  const c = values[4];
+
+  return Math.round(Math.atan2(c, a) * (180 / Math.PI));
+}

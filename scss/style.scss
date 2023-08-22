@@ -25,18 +25,18 @@
 
 .container {
     position: absolute;
-    top: 20vh;
-    left: 20vw;
+    top: -10vh;
+    left: 0vw;
     height: 60vh;
     width: 30vw;
     // transform: translate(-50%, -50%);
-    // perspective: 1000px;
+    perspective: 1000px;
 }
 
 .box {
     position: absolute;
-    top: 10rem;
-    left: 10rem;
+    top: 18vh;
+    left: 50vw;
     height: 125px;
     width: 125px;
     transform-style: preserve-3d;
