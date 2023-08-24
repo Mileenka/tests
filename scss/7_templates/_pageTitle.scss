@@ -1,0 +1,40 @@
+@use '../1_settings/' as *;
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageTitle {
+    position: relative;
+    margin-left: 5rem;
+    font-size: calc(.5rem + 2vw);
+    color: pink;
+    letter-spacing: .3rem;
+    line-height: calc(.7rem + 2vw);
+    box-shadow: #f004f040 0px 1px 3px 1.5px, rgba(255, 255, 255, 0.793) 0px 1px 3px 1.5px, rgb(15, 3, 68) 3px 0px 5px 1.5px;
+    animation: title forwards 1s;
+    z-index: -1;
+  
+}
+
+
+.fullName::first-letter {
+    font-size: 2.5rem;
+    color: rgba(192, 57, 199, 0.795);
+    opacity: .8;
+}
+
+.profession {
+    margin-left: .2rem;
+}
+
+.developer {
+    display: flex;
+    justify-content: end;
+    color: rgba(192, 57, 199, 0.795);
+}
+

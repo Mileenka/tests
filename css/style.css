@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baumans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Indie+Flower&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +67,16 @@ body {
   font-family: "Baumans", cursive;
 }
 
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  border: 1px solid pink;
+}
+
 .mobileOpenMenu,
 .navList {
   display: flex;
@@ -120,6 +130,7 @@ body {
 }
 
 .navList {
+  position: absolute;
   width: 3.5rem;
   height: 3.5rem;
   box-shadow: rgba(240, 4, 240, 0.2509803922) 0px 1px 3px 1.5px, rgba(255, 255, 255, 0.793) 0px 1px 3px 1.5px, rgb(15, 3, 68) 3px 0px 5px 1.5px;
@@ -168,6 +179,76 @@ body {
   animation-fill-mode: forwards;
 }
 
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageTitle {
+  position: relative;
+  margin-left: 5rem;
+  font-size: calc(0.5rem + 2vw);
+  color: pink;
+  letter-spacing: 0.3rem;
+  line-height: calc(0.7rem + 2vw);
+  box-shadow: rgba(240, 4, 240, 0.2509803922) 0px 1px 3px 1.5px, rgba(255, 255, 255, 0.793) 0px 1px 3px 1.5px, rgb(15, 3, 68) 3px 0px 5px 1.5px;
+  animation: title forwards 1s;
+  z-index: -1;
+}
+
+.fullName::first-letter {
+  font-size: 2.5rem;
+  color: rgba(192, 57, 199, 0.795);
+  opacity: 0.8;
+}
+
+.profession {
+  margin-left: 0.2rem;
+}
+
+.developer {
+  display: flex;
+  justify-content: end;
+  color: rgba(192, 57, 199, 0.795);
+}
+
+.myStorySection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 100vw;
+  height: 25rem;
+  z-index: -1;
+}
+
+.titleMyStory {
+  font-family: "Indie Flower", cursive;
+  color: white;
+  font-size: 2.4em;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 92vw;
+  margin-top: 1rem;
+  padding: 0.3rem 1rem;
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  border: 2px solid rgb(217, 163, 233);
+  border-radius: 0.8rem;
+}
+
 .displayNone {
   display: none;
 }
@@ -176,6 +257,21 @@ body {
   visibility: hidden;
 }
 
+@keyframes title {
+  0% {
+    transform: translateX(22rem);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(0.4rem);
+  }
+}
 @keyframes home {
   0% {
     transform: translateX(0);
@@ -197,7 +293,7 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translateX(-1.7rem) translateY(-9rem);
+    transform: translateX(5rem) translateY(2rem);
   }
 }
 @keyframes codeCrafts {
@@ -209,7 +305,7 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translateX(6.5rem) translateY(-9.5rem);
+    transform: translateX(5rem) translateY(-3rem);
   }
 }
 @keyframes mySkills {
@@ -221,7 +317,7 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translateX(0rem) translateY(-9rem);
+    transform: translateX(10rem) translateY(-1rem);
     animation-play-state: paused;
   }
 }
@@ -234,106 +330,9 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translateX(2rem) translateY(-17rem);
+    transform: translateX(15rem) translateY(-2rem);
     animation-play-state: paused;
   }
-}
-.container {
-  position: absolute;
-  top: -10vh;
-  left: 0vw;
-  height: 60vh;
-  width: 30vw;
-  perspective: 1000px;
-}
-
-.box {
-  position: absolute;
-  top: 18vh;
-  left: 50vw;
-  height: 125px;
-  width: 125px;
-  transform-style: preserve-3d;
-  transform: rotateY(175deg) rotateX(15deg);
-}
-
-.box::after {
-  content: "Milena Wasowicz Frontend-Developer";
-  position: absolute;
-  top: 0rem;
-  left: -1.2rem;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  letter-spacing: 5px;
-  text-shadow: rgba(240, 4, 240, 0.2509803922) 8px 10px 3px 1.5px;
-  color: pink;
-  transform-style: preserve-3d;
-  transform: rotateX(0deg) rotateY(-160deg);
-}
-
-.side {
-  position: absolute;
-  height: 125px;
-  width: 125px;
-  text-align: center;
-  padding: 100px, 0px;
-  background: rgba(0, 0, 0, 0);
-  border-width: 2px;
-  border-style: solid;
-  font-size: 32px;
-  box-sizing: border-box;
-}
-
-.side::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  left: 0;
-  z-index: -1;
-  background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
-}
-
-.side.top::before,
-.side.bottom::before {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
-}
-
-.side.left::before,
-.side.right::before {
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(to right, rgb(176, 15, 163), rgb(9, 9, 75));
-}
-
-.left {
-  right: 62.5px;
-  transform: rotateY(90deg);
-}
-
-.right {
-  left: 62.5px;
-  transform: rotateY(90deg);
-}
-
-.top {
-  bottom: 62.5px;
-  transform: rotateX(90deg);
-}
-
-.bottom {
-  top: 62.5px;
-  transform: rotateX(90deg);
-}
-
-.front {
-  transform: translateZ(62.5px);
-}
-
-.back {
-  transform: translateZ(-62.5px);
 }
 
 /*# sourceMappingURL=style.css.map */

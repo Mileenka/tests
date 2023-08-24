@@ -4,13 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./assets/img/portfolio.png" type="image/x-icon">
         <link rel="stylesheet" href="./css/style.css">
         <title>Mobile Menu</title>
     </head>
     <body>
-        <div id="container" class="container">
+        <!-- <div id="container" class="container">
             <div id="box" class="box">
-                <!-- <p id="golden-thoughts" class="golden-thoughts"></p> -->
+                <p id="golden-thoughts" class="golden-thoughts"></p>
                     <div id="front" class="side front"></div>
                     <div id="back" class="side back"></div>
                     <div id="left" class="side left"></div>
@@ -18,10 +19,19 @@
                     <div id="top" class="side top"></div>
                     <div id="bottom" class="side bottom"></div>
             </div>
+        </div> -->
+
+        <!-- Background -->
+        <div id="bg" class="bg">
+            <div id="bgEffects" class="bgEffects"></div>
         </div>
+
+        <!-- Open Menu -->
         <span id="openMenu" class="openMenu">
             <div id="mobileOpenMenu" class="mobileOpenMenu"></div>
         </span>
+
+        <!-- Navigation Menu -->
         <nav id="nav" class="nav">
             <span id="closeMenu" class="closeMenu ">
                 <div id="mobileCloseMenu" class="mobileCloseMenu displayNone">
@@ -31,6 +41,38 @@
             </span>
             <ul id="ulNav" class="ulNav"></ul>
         </nav>
+
+      <main>
+            <!-- Name and profession section-->
+            <section id="pageTitle" class="pageTitle">
+                <p id="fullName" class="fullName">Milena Wasowicz</p>
+                <p id="profession" class="profession">Front-end <span class="developer">Developer</span></p>
+            </section>
+    
+            <!-- My story section -->
+            <section id="myStorySection" class="myStorySection">
+                <h4 class="titleMyStory">My story</h4>
+                <div id="aboutMe" class="aboutMe">Hello! I'm Milena, a dedicated creator with an unwavering grin. Here's the lowdown:
+
+                 <br>   Driven Achiever: I tackle big goals with unyielding determination.
+                    Path Lover: The journey is just as exciting as the destination.
+                    Code Enthusiast: I bring dreams to life through web development.
+                    
+                    Forever Learning: I thrive on growth and embrace new challenges.
+                    Recruiters, if you're looking for a coding partner-in-crime, let's connect and make things sparkle!
+                    
+                    With coding zeal,
+                    Milena</div>
+            </section>
+    
+            <!-- CodeCraft section -->
+    
+            <!-- My skills section -->
+    
+            <!-- Quick Contact section -->
+      </main>
+
+        <!-- Footer -->
         <script type="module" src="./src/init.js"></script>
     </body>
 </html>

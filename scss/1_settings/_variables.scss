@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Indie+Flower&display=swap');
 
 /* Fonts */
 
 $baumans-font: 'Baumans', cursive;
+$indie-flower:'Indie Flower', cursive;
+
 
 $font-base: 10px;
 
@@ -10,6 +12,7 @@ $font-base: 10px;
 
 $bg-color: #131313f7;
 $font-color: #f3f1d3;
+$pink: #f004f040;
 
 /* Breakpoints for RWD */
 

@@ -1,3 +1,22 @@
+@keyframes title {
+    0% {
+        transform: translateX(22rem);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateX(.4rem);
+    }
+}
+
 @keyframes home {
     0% {
         transform: translateX(0);
@@ -28,7 +47,7 @@
     }
 
     100% {
-        transform: translateX(-1.7rem) translateY(-9rem);
+        transform: translateX(5rem) translateY(2rem);
     }
 }
 
@@ -45,7 +64,7 @@
     }
 
     100% {
-        transform: translateX(6.5rem) translateY(-9.5rem);
+        transform: translateX(5rem) translateY(-3rem);
     }
 }
 
@@ -64,7 +83,7 @@
     }
 
     100% {
-        transform: translateX(0rem) translateY(-9rem);
+        transform: translateX(10rem) translateY(-1rem);
         animation-play-state: paused;
     }
 }
@@ -82,7 +101,7 @@
     }
 
     100% {
-        transform: translateX(2rem) translateY(-17rem);
+        transform: translateX(15rem) translateY(-2rem);
         animation-play-state: paused;
     }
 }
