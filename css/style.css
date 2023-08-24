@@ -74,7 +74,6 @@ body {
   width: 100vw;
   height: 100%;
   z-index: -1;
-  border: 1px solid pink;
 }
 
 .mobileOpenMenu,
@@ -245,8 +244,35 @@ main {
   font-size: 0.8rem;
   line-height: 1.6rem;
   letter-spacing: 0.1rem;
-  border: 2px solid rgb(217, 163, 233);
   border-radius: 0.8rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-self: center;
+  width: 90vw;
+  margin-top: 1.5rem;
+}
+
+.socialBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 2.5rem;
+  box-shadow: rgba(240, 4, 240, 0.2705882353) 1px -0.5px 0px 1px, rgba(255, 255, 255, 0.793) -1px 0.5px 0px 1px;
+  box-shadow: rgba(240, 4, 240, 0.2509803922) 0px 1px 3px 0.5px, rgba(255, 255, 255, 0.793) 0px 1px 3px 0.5px, rgb(15, 3, 68) 3px 0px 5px 0.5px;
+  border-radius: 0.5rem;
+}
+
+.social-media img {
+  width: 2rem;
+}
+
+.linkedin img {
+  width: 1.6rem;
 }
 
 .displayNone {
