@@ -1,14 +1,13 @@
 @use '../1_settings/' as *;
 
 .myStorySection {
-    position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
     width: 100vw;
-    height: 25rem;
-    
+    margin-top: 4rem;
+    padding: .5rem 1rem;
     z-index: -1;
+    // border: 1px solid red;
 }
 
 .titleMyStory {
@@ -22,47 +21,19 @@
 
 .aboutMe {
     display: flex;
-    justify-content: center;
     align-self: center;
-    width: 92vw;
-    margin-top: 1rem;
-    padding: .3rem 1rem;
-    color: white;
-    font-size: .8rem;
-    line-height: 1.6rem;
-    letter-spacing: .1rem;
-    // border: 2px solid rgb(217, 163, 233);
     border-radius: .8rem;
+    // border: 1px solid red;
 }
 
-.social-media {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-self: center;
-    width: 90vw;
-    margin-top: 1.5rem;
+.aboutMeContent {
+    width: 100%;
+    height: auto;
+    font-size: calc(.6rem + 1vw);
+    padding: 1rem;
+    color: white;
+    line-height: 1.5rem;
+    letter-spacing: .1rem;
+    overflow-wrap: break-word;
 }
 
-.socialBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 2.5rem;
-    // border: 1px solid white;
-    // background-color: rgb(38, 37, 38);
-    box-shadow: #f004f045 1px -.5px 0px 1px, rgba(255, 255, 255, 0.793) -1px .5px 0px 1px;
-    box-shadow: #f004f040 0px 1px 3px .5px, rgba(255, 255, 255, 0.793) 0px 1px 3px .5px, rgb(15, 3, 68) 3px 0px 5px .5px;
-
-    border-radius: .5rem;
-}
-
-.social-media img {
-    
-    width: 2rem;
-}
-
-.linkedin img {
-    width: 1.6rem;
-}

@@ -215,12 +215,11 @@ main {
 }
 
 .myStorySection {
-  position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
   width: 100vw;
-  height: 25rem;
+  margin-top: 4rem;
+  padding: 0.5rem 1rem;
   z-index: -1;
 }
 
@@ -235,16 +234,19 @@ main {
 
 .aboutMe {
   display: flex;
-  justify-content: center;
   align-self: center;
-  width: 92vw;
-  margin-top: 1rem;
-  padding: 0.3rem 1rem;
-  color: white;
-  font-size: 0.8rem;
-  line-height: 1.6rem;
-  letter-spacing: 0.1rem;
   border-radius: 0.8rem;
+}
+
+.aboutMeContent {
+  width: 100%;
+  height: auto;
+  font-size: calc(0.6rem + 1vw);
+  padding: 1rem;
+  color: white;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  overflow-wrap: break-word;
 }
 
 .social-media {
@@ -253,6 +255,8 @@ main {
   justify-content: space-around;
   align-self: center;
   width: 90vw;
+  height: 3rem;
+  padding: 0.2rem;
   margin-top: 1.5rem;
 }
 
@@ -260,11 +264,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
+  width: 4rem;
   height: 2.5rem;
   box-shadow: rgba(240, 4, 240, 0.2705882353) 1px -0.5px 0px 1px, rgba(255, 255, 255, 0.793) -1px 0.5px 0px 1px;
   box-shadow: rgba(240, 4, 240, 0.2509803922) 0px 1px 3px 0.5px, rgba(255, 255, 255, 0.793) 0px 1px 3px 0.5px, rgb(15, 3, 68) 3px 0px 5px 0.5px;
   border-radius: 0.5rem;
+}
+.socialBox:active {
+  background-color: rgba(238, 174, 241, 0.584);
 }
 
 .social-media img {
@@ -273,6 +280,64 @@ main {
 
 .linkedin img {
   width: 1.6rem;
+}
+
+.codeCraft {
+  width: 100vw;
+  margin-top: 3rem;
+  color: white;
+}
+
+.titleCodeCraft {
+  font-family: "Indie Flower", cursive;
+  font-size: 2.4em;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+}
+
+.sliderBox {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  width: 400%;
+  min-height: 100%;
+  transform: translateX(-25%);
+  transition: all 0.5s;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+
+.projectView img {
+  width: 16rem;
+  height: 10rem;
+}
+
+.arrows {
+  width: 2.5rem;
+  height: 40px;
+  position: absolute;
+  top: 85%;
+  fill: hsl(287deg, 36%, 44%);
+  z-index: 1;
+}
+
+.previous {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.currentBox {
+  position: relative;
 }
 
 .displayNone {

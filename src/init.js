@@ -128,3 +128,55 @@ dom.mobileOpenMenu.addEventListener('click', () => {
 
 //   return Math.round(Math.atan2(c, a) * (180 / Math.PI));
 // }
+
+
+
+const btnLeft = document.querySelector(".previous");
+const btnRight = document.querySelector(".next");
+
+const a = document.getElementById("box1");
+const b = document.getElementById("box2");
+const c = document.getElementById("box3");
+const d = document.getElementById("box4");
+
+const boxList = [a, b, c, d];
+
+let currentBox = boxList[1];
+currentBox.classList.add('currentBox');
+let currentIndex = 1;
+
+let position = -25;
+let toLeftPosition = -25;
+let toRightPosition = 25;
+
+btnRight.addEventListener(`click`, () => {
+  if (currentIndex < boxList.length - 1) {
+    document.getElementById("sliderBox").style.transform = `translateX( ${
+      position + toLeftPosition
+    }%)`;
+    position += toLeftPosition;
+
+    currentBox.style.transform = "scale(0.5)";
+    currentBox.style.opacity = "0.6";
+    currentBox = boxList[currentIndex + 1];
+    currentIndex = currentIndex + 1;
+    currentBox.style.transform = "scale(1)";
+    currentBox.style.opacity = "1";
+  }
+});
+
+btnLeft.addEventListener(`click`, () => {
+  if (currentIndex > 0) {
+    document.getElementById("sliderBox").style.transform = `translateX( ${
+      position + toRightPosition
+    }%)`;
+    position += toRightPosition;
+
+    currentBox.style.transform = "scale(0.5)";
+    currentBox.style.opacity = "0.6";
+    currentBox = boxList[currentIndex - 1];
+    currentIndex = currentIndex - 1;
+    currentBox.style.transform = "scale(1)";
+    currentBox.style.opacity = "1";
+  }
+});
